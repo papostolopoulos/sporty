@@ -1,0 +1,227 @@
+body {
+	background-color: #CCC;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+#header {
+	background-color: #FC0;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	height: 100px;
+	vertical-align: bottom;
+}
+#mainContent {
+	height: auto;
+	width: 70%;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+}
+p #Globe {
+	float: right;
+}
+
+#leftSideBar {
+	padding: 0px;
+	float: left;
+	width: 14%;
+	height: auto;
+	margin-top: 5px;
+	margin-right: 0.7%;
+	margin-bottom: 0px;
+	margin-left: 0.1%;
+}
+#rightSideBar {
+	padding: 0px;
+	float: left;
+	height: auto;
+	width: 14%;
+	margin-top: 5px;
+	margin-right: 0.1%;
+	margin-bottom: 0px;
+	margin-left: 0.7%;
+}
+#apDiv1 ul li {
+	margin: 0px;
+}
+
+
+
+#footer {
+	margin: 0px;
+	padding: 5px;
+	height: auto;
+	clear: both;
+	font-size: small;
+	font-weight: bold;
+	text-align: center;
+}
+h1 {
+	font-variant: normal;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #0C6;
+	border-right-color: #0C6;
+	border-bottom-color: #0C6;
+	border-left-color: #0C6;
+}
+h4 {
+	color: #000;
+	text-align: justify;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+#logoBanner {
+	width: 100%;
+	height: 100%;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+}
+
+
+#workboard {
+	text-align: left;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-color: #FFF;
+	width: 62em;
+	border: 1px solid #099;
+}
+h3 {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-weight: bolder;
+	font-variant: normal;
+	font-style: normal;
+	text-transform: none;
+}
+
+#mainContent p {
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+h2 {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+
+#SportyTouristLogo {
+	position: absolute;
+	width: 779px;
+	height: 148px;
+	left: 108px;
+	top: 1px;
+}
+#NavigationBar {
+	width: 100%;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+}
+#navidationTable {
+	background-color: #0F6;
+	border: 1px none #000;
+}
+#NavigationTableInside {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	padding: 0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+}
+#SportingEventsLayer {
+}
+#CoolDestinationsLayer {
+}
+#TravelYourSportsLayer {
+}
+#NavigationTableInside tr td a img {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #000;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	border-left-color: #000;
+}
