@@ -8,13 +8,11 @@
   Sporty tourist also provides information to popular traveling destinations where
   active travelers can enjoy the sports activities of their liking.">
   <title>Sporty tourist. Travel your sports</title>
+  <link rel="stylesheet" href="assets/cleanuphtml.css">
   <link rel="stylesheet" href="assets/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto:400,700|Lato:100,300,400" rel="stylesheet">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="assets/main.js"></script>
-
-
 </head>
 
 <body>
@@ -23,7 +21,7 @@
     <h1 class="logo"><a href="index.html">Sporty tourist.</a> <br>
     Travel your sports</h1>
   </section>
-    
+
     <h3 class="tagline">Learn the latest about your favorite sport. Get information about your next destination
     as a sports fan or active traveller.</h3>
     <nav class="nav primary-nav">
@@ -36,22 +34,28 @@
   <div class="group">
     <aside>Aside tag. Is this where all the related to the articles links should be added?</aside>
 
+  <section class="playland">
+    <input type="text" placeholder="Enter your search here">
+    <button name="submit" id="searchButton">Submit</button>
+  </section>
   <!--Hero-->
   <section class="hero container">
     <h2>h2 with a headline from the latest news</h2>
     <p>Paragraph under the h2 and inside the section</p>
     <p>And another paragraph</p>
-    <a href="#" class="btn btn-alt">Register now</a>
   </section>
 
   <!--Teasers-->
   <section class="grid">
 
   <!--Sports news-->
-    <section class="teaser col-1-3">
-      <a href="#"><h5>Look! and h5</h5>
+    <section id="sportsSection" class="teaser col-1-3">
+      <a href="#"><h5>Look! an h5</h5>
       <h3>h3 for More news</h3></a>
       <p>paragraph in the "More news" section</p>
+
+      This is where the content should render
+      <article id="sportsArticle"></article>
     </section><!--
       Destinations
     --><section class="teaser col-1-3">
@@ -70,12 +74,10 @@
     </section>
   </section>
 
-  
+
   </div>
 
   <footer class="primary-footer container group" id="footerId">
-    <input type="email" placeholder="Join our email list"></input>
-    <input type="submit" placeholder="Submit"></input> <br>
     <small>
       &copy; <a href="mailto:thebrain@sportytourist.com">Paraskevas Apostolopoulos.</a> Aug 2016 - today |
       <a href="html/aboutus.html" target="_blank">About Sporty Tourist</a>
