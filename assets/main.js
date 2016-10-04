@@ -1,5 +1,20 @@
 "use strict"
 let sportSourcesArr;
+var APISource = function(url, sportsArticle) {
+  this.url = url,
+  this.sportsArticle = sportsArticle || ""
+}
+
+var bbcSports = new APISource("https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var espn = new APISource("https://newsapi.org/v1/articles?source=espn&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var footballItalia = new APISource("https://newsapi.org/v1/articles?source=football-italia&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var fourFourTwo = new APISource("https://newsapi.org/v1/articles?source=four-four-two&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var foxSports = new APISource("https://newsapi.org/v1/articles?source=fox-sports&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var nflNews = new APISource("https://newsapi.org/v1/articles?source=nfl-news&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var skySportsNews = new APISource("https://newsapi.org/v1/articles?source=sky-sports-news&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var talkSport = new APISource("https://newsapi.org/v1/articles?source=talksport&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+var theSportBible = new APISource("https://newsapi.org/v1/articles?source=the-sport-bible&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113");
+
 // var randomSportSourcesArr = randomElementsArr(sportSourcesArr);
 // console.log(randomSportSourcesArr);
 
@@ -77,6 +92,33 @@ function randomElementsArr (array) {
 // $("document").ready(function(){
 //   console.log("inside");
 // });
+
+
+
+/*--------------------------
+Working as of Monday
+window.onload = function() {
+  var sportsSection = document.getElementById("sportsSection");
+  sportSourcesArr = new Array(2);
+  for (let i = 0; i < sportSourcesArr.length; i++) {
+    var sportsArticle = document.createElement("article");
+    sportsArticle.className += "sportsArticleClass";
+    sportSourcesArr[i] = sportsArticle;
+    bbcSportsData(i);
+    // sportSourcesArr[i].addEventListener("load", bbcSportsData);
+    //function for adding the content goes here;
+    sportsArticle.textContent = "article area " + i; //remove this when ready
+    sportsSection.appendChild(sportsArticle);
+  }
+  // bbcArticle = document.getElementById("sportsArticle");
+  // console.log("inside the window on load");
+  // bbcArticle.addEventListener("load", bbcSportsData);
+  // bbcSportsData();
+  // document.body.appendChild(bbcArticle);
+  // sportsSection.appendChild(bbcArticle);
+};
+
+----------------------------*/
 
 
 //What the hell is this?
