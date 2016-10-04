@@ -59,3 +59,12 @@ cite, em {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+/*
+  ========================================
+  classes for articles
+  ========================================
+*/
+.sportsArticleClass {
+  background-color: green;
+}
