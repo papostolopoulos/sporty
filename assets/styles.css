@@ -95,14 +95,12 @@ container and grid*/
 */
 .sportsArticleClass {
   border: 1px solid rgb(242, 242, 242);
-  /*padding: 5px;*/
   width: 50%;
-  /*max-width: 500px;*/
   display: inline-block;
   margin: auto;
-  padding: 2px;
+  padding: 5px;
   vertical-align: top;
-  height: 350px;
+  height: 355px;
   overflow: hidden;
 }
 
@@ -110,12 +108,18 @@ container and grid*/
   border: 1px solid rgb(0, 0, 0);
   cursor: pointer;
 }
-
-.sportsArticleClass img {
+.imageDiv {
   width: 98%;
   height: 300px;
-  display: block;
+  background: yellow;
   margin: auto;
+  overflow: hidden;
+}
+
+.imageDiv img {
+  width: 100%;
+  /*display: block;*/
+  /*margin: auto;*/
   /*position: relative;
   display: inline-block;*/
 }
@@ -130,18 +134,12 @@ container and grid*/
   padding-left: 15px;
   padding-right: 15px;
 }
-.col-1-3,
-.col-2-3  {
-  display: inline-block;
-  vertical-align: top;
-}
-.col-1-3 {
-  width: 33.33%;
-}
-.col-2-3 {
-  width: 66.66%;
-}
 
 .teaser a:hover h3{
   color:  rgba(169, 178, 185, 1);
+}
+
+#dummie {
+  width: 100%;
+  overflow: visible;
 }

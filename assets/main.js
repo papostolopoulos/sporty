@@ -69,20 +69,24 @@ function apiData(idxForSourcesArr, url) {
   function sportsNewsResult(data) {
     let resultTitle = document.createElement("h3");
     let resultSource = document.createElement("h4");
+    let imageDiv = document.createElement("div");
     let resultImage = document.createElement("img");
     let resultArticle = document.createElement("p");
     let resultAnchor = document.createElement("a");
 
+    imageDiv.className += "imageDiv";
     resultTitle.textContent = data.articles[0].title;
     resultAnchor.setAttribute("href", data.articles[0].url);
     resultAnchor.setAttribute("target", "_blank");
+    resultImage.setAttribute("alt", "Sorry, there is no image provided by the source")
     resultAnchor.innerText = "Source: " + data.source + " via newsapi.org ";
     console.log(data.articles[0].source);
     resultImage.src = data.articles[0].urlToImage;
     resultArticle.textContent = data.articles[0].description;
 
     //
-    sourcesArr[idxForSourcesArr].appendChild(resultImage);
+    imageDiv.appendChild(resultImage);
+    sourcesArr[idxForSourcesArr].appendChild(imageDiv);
     sourcesArr[idxForSourcesArr].appendChild(resultTitle);
     resultSource.appendChild(resultAnchor);
     sourcesArr[idxForSourcesArr].appendChild(resultSource);
