@@ -37,14 +37,13 @@
     url: "https://newsapi.org/v1/articles?source=football-italia&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
   }
 ];
-var sourcesUrl;
 // var randomSportSourcesArr = randomElementsArr(sourcesArr);
 // console.log(randomSportSourcesArr);
 
 window.onload = function() {
   // var randomOrderSources = randomElementsArr(sourcesArr);
   var sportsSection = document.getElementById("sportsSection");
-  for (let i = 0; i < sourcesArr.length; i++) {
+  for (let i = 1; i < sourcesArr.length; i++) {
     var sourcesUrl = sourcesArr[i].url;
     var sportsArticle = document.createElement("article");
     sportsArticle.className += "sportsArticleClass";
@@ -56,7 +55,7 @@ window.onload = function() {
   toggleArticleClasses();
 };//End of onload function
 
-//Retrieval of initial data bbc sport
+//api Data retrieval
 function apiData(idxForSourcesArr, url) {
   console.log("The url is: " + url);
   $.ajax({
