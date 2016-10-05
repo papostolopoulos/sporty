@@ -50,10 +50,11 @@ window.onload = function() {
     sportsArticle.className += "sportsArticleClass";
     sourcesArr[i] = sportsArticle;
     apiData(i, sourcesUrl);
-    // sportsArticle.textContent = "article area " + i; //remove this line when ready
     sportsSection.appendChild(sportsArticle);
   }
-};
+
+  toggleArticleClasses();
+};//End of onload function
 
 //Retrieval of initial data bbc sport
 function apiData(idxForSourcesArr, url) {
@@ -104,46 +105,23 @@ function randomElementsArr (array) {
     if (endArray.indexOf(array[counter]) === -1) {
       endArray.push(array.splice(counter,1));
     }
-    // array.splice(counter,1);
     iterator --;
   }
   return endArray;
 }
-//
+
 // function bbcNewsError {
 //
 // }
 
-// $("document").ready(function(){
-//   console.log("inside");
-// });
-
-
-
-/*--------------------------
-Working as of Monday
-window.onload = function() {
-  var sportsSection = document.getElementById("sportsSection");
-  sourcesArr = new Array(2);
-  for (let i = 0; i < sourcesArr.length; i++) {
-    var sportsArticle = document.createElement("article");
-    sportsArticle.className += "sportsArticleClass";
-    sourcesArr[i] = sportsArticle;
-    apiData(i);
-    // sourcesArr[i].addEventListener("load", apiData);
-    //function for adding the content goes here;
-    sportsArticle.textContent = "article area " + i; //remove this when ready
-    sportsSection.appendChild(sportsArticle);
-  }
-  // bbcArticle = document.getElementById("sportsArticle");
-  // console.log("inside the window on load");
-  // bbcArticle.addEventListener("load", apiData);
-  // apiData();
-  // document.body.appendChild(bbcArticle);
-  // sportsSection.appendChild(bbcArticle);
-};
-
-----------------------------*/
+//toggle between classes for expanding the article content
+function toggleArticleClasses() {
+  $(".sportsArticleClass").on("click", function(){
+    $(this).siblings().removeClass("sportsArticleExpanded");
+    $(this).toggleClass("sportsArticleExpanded");
+    $(this).children("div").toggleClass("imageDivExpanded");
+  });
+}
 
 
 //What the hell is this?

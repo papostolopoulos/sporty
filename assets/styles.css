@@ -50,6 +50,32 @@ cite, em {
   font-style: italic;
 }
 
+/*
+  ========================================
+  Hero
+  ========================================
+*/
+
+.hero {
+  color: rgba(255, 255, 255, 1);
+  /*line-height: 44px;*/
+  padding: 15px;
+}
+
+.hero h2 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.hero h4 {
+  font-size: 24px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
 
 /*
   ========================================
@@ -82,7 +108,6 @@ cite, em {
 }/*- Not sure if I need the width to be set to a percentage. Used to be 960px for both
 container and grid*/
 
-
 /*.container {
   padding-left: 30px;
   padding-right: 30px;
@@ -108,6 +133,7 @@ container and grid*/
   border: 1px solid rgb(0, 0, 0);
   cursor: pointer;
 }
+
 .imageDiv {
   width: 98%;
   height: 300px;
@@ -115,6 +141,55 @@ container and grid*/
   margin: auto;
   overflow: hidden;
 }
+
+#dummie {
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 5px;
+  height: 355px;
+  /*overflow: visible;*/
+}
+
+#dummie h4 a:hover{
+  color: rgba(169, 178, 185, 1);
+}
+
+#dummieDiv{
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  background: yellow;
+  overflow: hidden;
+}
+
+#dummieDiv img{
+  width: 100%;
+}
+
+/*----------------------*/
+.sportsArticleExpanded {
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%; display: block;
+  margin: auto;
+  height: auto;
+  padding: 5px;
+  /*overflow: visible;*/
+}
+
+.imageDivExpanded {
+  width: 50%;
+  margin-right: 5px;
+  float: left;
+  height: auto;
+  background: yellow;
+}
+
+.imageDivExpanded img {
+  width: 100%;
+}
+/*------------------------*/
 
 .imageDiv img {
   width: 100%;
@@ -128,18 +203,11 @@ container and grid*/
   color:  rgba(169, 178, 185, 1);
 }
 
-.grid,
-.col-1-3,
-.col-2-3 {
+.grid {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .teaser a:hover h3{
   color:  rgba(169, 178, 185, 1);
-}
-
-#dummie {
-  width: 100%;
-  overflow: visible;
 }
