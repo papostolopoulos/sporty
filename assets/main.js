@@ -42,18 +42,42 @@
 
 window.onload = function() {
   // var randomOrderSources = randomElementsArr(sourcesArr);
-  var sportsSection = document.getElementById("sportsSection");
+  heroSectionArticles();
+  sportsSectionArticles();
+
+  toggleHeroClass();
+  toggleArticleClasses();
+};//End of onload function
+
+
+//---------------------HERO CONTENT CREATION------------------------------
+//creation and append of the article tags in the main Grid
+function heroSectionArticles() {
+  let heroSection = document.getElementById("heroSection");
+  let sourcesUrl = sourcesArr[0].url;
+  let heroArticle = document.createElement("article");
+  heroArticle.className += "heroArticleClass";
+  heroArticle.className += " transform";
+  sourcesArr[0] = heroArticle;
+  apiData(0, sourcesUrl);
+  heroSection.appendChild(heroArticle);
+}
+
+
+//------------------MAIN GRID CONTENT CREATION----------------------------
+//creation and append of the article tags in the main Grid
+function sportsSectionArticles() {
+  let sportsSection = document.getElementById("sportsSection");
   for (let i = 1; i < sourcesArr.length; i++) {
-    var sourcesUrl = sourcesArr[i].url;
-    var sportsArticle = document.createElement("article");
+    let sourcesUrl = sourcesArr[i].url;
+    let sportsArticle = document.createElement("article");
     sportsArticle.className += "sportsArticleClass";
+    sportsArticle.className += " transform";
     sourcesArr[i] = sportsArticle;
     apiData(i, sourcesUrl);
     sportsSection.appendChild(sportsArticle);
   }
-
-  toggleArticleClasses();
-};//End of onload function
+}
 
 //api Data retrieval
 function apiData(idxForSourcesArr, url) {
@@ -74,7 +98,9 @@ function apiData(idxForSourcesArr, url) {
     let resultArticle = document.createElement("p");
     let resultAnchor = document.createElement("a");
 
-    imageDiv.className += "imageDiv";
+    imageDiv.className += "heroImageDiv";
+    // imageDiv.className += " transform";
+    // resultImage.className += "transform";
     resultTitle.textContent = data.articles[0].title;
     resultAnchor.setAttribute("href", data.articles[0].url);
     resultAnchor.setAttribute("target", "_blank");
@@ -113,12 +139,28 @@ function randomElementsArr (array) {
 //
 // }
 
+//-------------------TOGGLES------------------------------
+//toggle between classes for expanding the article content
+function toggleHeroClass() {
+  $(".heroArticleClass").on("click", function(){
+    $(this).toggleClass("heroArticleExpanded");
+    $(this).children("div").toggleClass("heroImageDivExpanded");
+
+    $(".sportsArticleExpanded").removeClass("sportsArticleExpanded");
+    $(".imageDivExpanded").removeClass("imageDivExpanded");
+  });
+}
+
 //toggle between classes for expanding the article content
 function toggleArticleClasses() {
   $(".sportsArticleClass").on("click", function(){
-    $(this).siblings().removeClass("sportsArticleExpanded");
     $(this).toggleClass("sportsArticleExpanded");
     $(this).children("div").toggleClass("imageDivExpanded");
+
+    $(this).siblings().removeClass("sportsArticleExpanded");
+    $(".heroArticleExpanded").removeClass("heroArticleExpanded");
+    $(".heroImageDivExpanded").removeClass("heroImageDivExpanded");
+    $(this).siblings().children("div").removeClass("imageDivExpanded");
   });
 }
 

@@ -20,6 +20,14 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 36px;
   line-height: 44px;
+  font-family: Lemonada;
+  color: rgb(255,255,255);
+}
+
+.logo{
+  background: rgb(0,0,0);
+  float: left;
+  display: inline-block;
 }
 
 h2 {
@@ -29,7 +37,8 @@ h2 {
 
 h3 {
   font-size: 21px;
-  font-family: "Helvetica Neue"
+  font-family: "Helvetica Neue";
+  padding: 10px 0 10px 0;
 }
 
 h4 {
@@ -52,7 +61,7 @@ cite, em {
 
 /*
   ========================================
-  Hero
+  Hero typography
   ========================================
 */
 
@@ -62,13 +71,16 @@ cite, em {
   padding: 15px;
 }
 
-.hero h2 {
+.hero h3 {
   text-align: center;
   font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
 }
 
 .hero h4 {
   font-size: 24px;
+  padding-bottom: 10px;
 }
 
 .hero p {
@@ -103,19 +115,115 @@ cite, em {
 }
 
 .grid {
+  padding-left: 15px;
+  padding-right: 15px;
   margin: auto;
   width: 90%;
-}/*- Not sure if I need the width to be set to a percentage. Used to be 960px for both
-container and grid*/
+}
 
-/*.container {
-  padding-left: 30px;
-  padding-right: 30px;
-}*/
+.transform {
+  -webkit-transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -o-transition: width 1s linear;
+  -ms-transition: width 1s linear;
+  transition: width 1s linear;
+}
 
 /*
   ========================================
-  classes for articles
+  header classes
+  ========================================
+*/
+.header {
+  width: 100%;
+  background: rgb(0,0,0);
+  padding: 10px;
+  height: 65px;
+  vertical-align: middle;
+}
+
+.primary-nav {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.primary-nav a {
+  color: rgb(255,255,255);
+  font-size: 24px;
+  /*vertical-align: middle;*/
+}
+
+.primary-nav a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
+}
+
+/*
+  ========================================
+  hero classes
+  ========================================
+*/
+
+.heroArticleClass {
+  border: 1px solid rgb(242, 242, 242);
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 5px;
+  height: 340px;
+  overflow: hidden;
+  /*overflow: visible;*/
+}
+
+.heroArticleClass:hover {
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.heroArticleClass h4 a:hover{
+  color: rgba(169, 178, 185, 1);
+}
+
+.heroImageDiv{
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  background: yellow;
+  overflow: hidden;
+}
+
+.heroImageDiv img{
+  width: 100%;
+}
+
+
+/*--------Expansion on click--------------*/
+.heroArticleExpanded {
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
+  padding: 5px;
+  /*overflow: visible;*/
+}
+
+.heroImageDivExpanded {
+  width: 50%;
+  margin-right: 5px;
+  float: left;
+  height: auto;
+  background: yellow;
+}
+
+.heroImageDivExpanded img {
+  width: 100%;
+}
+/*----------------------------------------*/
+
+/*
+  ========================================
+  articles classes
   ========================================
 */
 .sportsArticleClass {
@@ -125,7 +233,7 @@ container and grid*/
   margin: auto;
   padding: 5px;
   vertical-align: top;
-  height: 355px;
+  height: 325px;
   overflow: hidden;
 }
 
@@ -142,44 +250,26 @@ container and grid*/
   overflow: hidden;
 }
 
-#dummie {
-  border: 1px solid rgb(242, 242, 242);
-  width: 100%;
-  display: block;
-  margin: auto;
-  padding: 5px;
-  height: 355px;
-  /*overflow: visible;*/
-}
-
-#dummie:hover {
-  border: 1px solid rgb(0, 0, 0);
-  cursor: pointer;
-}
-
-#dummie h4 a:hover{
-  color: rgba(169, 178, 185, 1);
-}
-
-#dummieDiv{
-  width: 100%;
-  margin: auto;
-  height: 250px;
-  background: yellow;
-  overflow: hidden;
-}
-
-#dummieDiv img{
+.imageDiv img {
   width: 100%;
 }
 
-/*----------------------*/
+.sportsArticleClass h4 a:hover{
+  color:  rgba(169, 178, 185, 1);
+}
+
+/*--------Expansion on click--------------*/
 .sportsArticleExpanded {
+  background: rgb(255, 255, 255);
   border: 1px solid rgb(0, 0, 0);
-  width: 100%; display: block;
+  width: 100%;
+  /*display: block;*/
   margin: auto;
   height: auto;
   padding: 5px;
+  position: relative;
+  float: left;
+  /*z-index: 1;*/
   /*overflow: visible;*/
 }
 
@@ -195,24 +285,3 @@ container and grid*/
   width: 100%;
 }
 /*------------------------*/
-
-.imageDiv img {
-  width: 100%;
-  /*display: block;*/
-  /*margin: auto;*/
-  /*position: relative;
-  display: inline-block;*/
-}
-
-.sportsArticleClass h4 a:hover{
-  color:  rgba(169, 178, 185, 1);
-}
-
-.grid {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.teaser a:hover h3{
-  color:  rgba(169, 178, 185, 1);
-}
