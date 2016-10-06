@@ -4,9 +4,12 @@
   ========================================
 */
 body {
-  background: rgba(255, 255, 255, 1);
-  color: #888;
+  background: rgb(227, 227, 227);
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+section {
+  background: rgb(255, 255, 255);
 }
 
 h1, h2, h3, h4, h5 {
@@ -14,8 +17,10 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 44px;
+  font-family: Futura;
+  color: rgb(255,255,255);
+  border-right: 2px solid rgb(0,0,0);
 }
 
 h2 {
@@ -25,6 +30,8 @@ h2 {
 
 h3 {
   font-size: 21px;
+  font-family: "Helvetica Neue";
+  padding: 10px 0 10px 0;
 }
 
 h4 {
@@ -45,6 +52,40 @@ cite, em {
   font-style: italic;
 }
 
+a {
+  text-decoration: none;
+}
+
+/*
+  ========================================
+  Hero typography
+  ========================================
+*/
+
+.hero {
+  color: rgba(255, 255, 255, 1);
+  padding: 15px;
+  border-right: 2px solid rgb(0,0,0);
+  border-left: 2px solid rgb(0,0,0);
+}
+
+.hero h3 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.hero h4 {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
 
 /*
   ========================================
@@ -62,9 +103,241 @@ cite, em {
 
 /*
   ========================================
-  classes for articles
+  Grid
+  ========================================
+*/
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.grid {
+  padding: 0 15px 15px 15px;
+  margin: auto;
+  width: 90%;
+  border-left: 2px solid rgb(0,0,0);
+  border-right: 2px solid rgb(0,0,0);
+  border-bottom: 2px solid rgb(0,0,0);
+}
+
+.transform {
+  -webkit-transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -o-transition: width 1s linear;
+  -ms-transition: width 1s linear;
+  transition: width 1s linear;
+}
+
+/*
+  ========================================
+  header classes
+  ========================================
+*/
+.header {
+  width: 100%;
+  background: rgb(0,0,0);
+  padding: 20px 5px 20px 5px;
+  height: auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.logo{
+  background: rgb(0,0,0);
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.primary-nav {
+display: inline-block;
+width: 72%;
+}
+
+.primary-nav a {
+  color: rgb(255,255,255);
+  font-size: 24px;
+}
+
+.primary-nav a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
+}
+
+.group {
+  height: auto;
+}
+
+/*
+  ========================================
+  hero classes
+  ========================================
+*/
+
+.heroArticleClass {
+  border: 1px solid rgb(242, 242, 242);
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 5px;
+  height: 340px;
+  overflow: hidden;
+}
+
+.heroArticleClass:hover {
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.heroArticleClass h4 a:hover{
+  color: rgba(169, 178, 185, 1);
+}
+
+.heroImageDiv{
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  overflow: hidden;
+  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+.heroImageDiv img{
+  width: 100%;
+}
+
+
+/*--------Expansion on click--------------*/
+.heroArticleExpanded {
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
+  padding: 5px;
+}
+
+.heroImageDivExpanded {
+  width: 50%;
+  margin-right: 5px;
+  float: left;
+  height: auto;
+  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+.heroImageDivExpanded img {
+  width: 100%;
+}
+/*----------------------------------------*/
+
+/*
+  ========================================
+  articles classes
   ========================================
 */
 .sportsArticleClass {
-  background-color: green;
+  border: 1px solid rgb(242, 242, 242);
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  padding: 5px;
+  vertical-align: top;
+  height: 325px;
+  overflow: hidden;
+}
+
+.sportsArticleClass:hover {
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.imageDiv {
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  overflow: hidden;
+  background: url("file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif");
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+/*.heroImageDiv{
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  background: url("/assets/logo.png");
+  overflow: hidden;
+}*/
+
+.imageDiv img {
+  width: 100%;
+}
+
+.sportsArticleClass h4 a:hover{
+  color:  rgba(169, 178, 185, 1);
+}
+
+/*--------Expansion on click--------------*/
+.sportsArticleExpanded {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  margin: auto;
+  height: auto;
+  padding: 5px;
+  position: relative;
+  float: left;
+}
+
+.imageDivExpanded {
+  width: 50%;
+  margin-right: 5px;
+  float: left;
+  height: auto;
+  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+.imageDivExpanded img {
+  width: 100%;
+}
+/*------------------------*/
+
+/*
+  ========================================
+  footer classes
+  ========================================
+*/
+
+.primary-footer {
+  background: rgb(0,0,0);
+  color: rgb(255,255,255);
+  border-left: 2px solid rgb(0,0,0);
+  border-right: 2px solid rgb(0,0,0);
+  border-bottom: 2px solid rgb(0,0,0);
+  padding: 15px;
+  display: block;
+  font-family: futura;
+  text-align: center;
+}
+
+.primary-footer a{
+  color: rgb(255,255,255);
+}
+
+.primary-footer a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
 }
