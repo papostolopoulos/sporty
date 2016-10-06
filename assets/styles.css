@@ -5,7 +5,6 @@
 */
 body {
   background: rgb(227, 227, 227);
-  /*color: #888;*/
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -18,16 +17,10 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 36px;
-  line-height: 44px;
-  font-family: Lemonada;
+  font-size: 44px;
+  font-family: Futura;
   color: rgb(255,255,255);
-}
-
-.logo{
-  background: rgb(0,0,0);
-  float: left;
-  display: inline-block;
+  border-right: 2px solid rgb(0,0,0);
 }
 
 h2 {
@@ -59,6 +52,10 @@ cite, em {
   font-style: italic;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*
   ========================================
   Hero typography
@@ -67,8 +64,9 @@ cite, em {
 
 .hero {
   color: rgba(255, 255, 255, 1);
-  /*line-height: 44px;*/
   padding: 15px;
+  border-right: 2px solid rgb(0,0,0);
+  border-left: 2px solid rgb(0,0,0);
 }
 
 .hero h3 {
@@ -115,10 +113,12 @@ cite, em {
 }
 
 .grid {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 15px 15px;
   margin: auto;
   width: 90%;
+  border-left: 2px solid rgb(0,0,0);
+  border-right: 2px solid rgb(0,0,0);
+  border-bottom: 2px solid rgb(0,0,0);
 }
 
 .transform {
@@ -137,25 +137,35 @@ cite, em {
 .header {
   width: 100%;
   background: rgb(0,0,0);
-  padding: 10px;
-  height: 65px;
+  padding: 20px 5px 20px 5px;
+  height: auto;
   vertical-align: middle;
+  text-align: center;
+}
+
+.logo{
+  background: rgb(0,0,0);
+  padding-left: 10px;
+  display: inline-block;
 }
 
 .primary-nav {
-  text-align: center;
-  vertical-align: middle;
+display: inline-block;
+width: 72%;
 }
 
 .primary-nav a {
   color: rgb(255,255,255);
   font-size: 24px;
-  /*vertical-align: middle;*/
 }
 
 .primary-nav a:hover {
   color: rgb(115,115,115);
   cursor: pointer;
+}
+
+.group {
+  height: auto;
 }
 
 /*
@@ -172,7 +182,6 @@ cite, em {
   padding: 5px;
   height: 340px;
   overflow: hidden;
-  /*overflow: visible;*/
 }
 
 .heroArticleClass:hover {
@@ -188,8 +197,12 @@ cite, em {
   width: 100%;
   margin: auto;
   height: 250px;
-  background: yellow;
   overflow: hidden;
+  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
 }
 
 .heroImageDiv img{
@@ -205,7 +218,6 @@ cite, em {
   margin: auto;
   height: auto;
   padding: 5px;
-  /*overflow: visible;*/
 }
 
 .heroImageDivExpanded {
@@ -213,7 +225,11 @@ cite, em {
   margin-right: 5px;
   float: left;
   height: auto;
-  background: yellow;
+  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
 }
 
 .heroImageDivExpanded img {
@@ -243,12 +259,24 @@ cite, em {
 }
 
 .imageDiv {
-  width: 98%;
-  height: 300px;
-  background: yellow;
+  width: 100%;
   margin: auto;
+  height: 250px;
   overflow: hidden;
+  background: url("file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif");
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
 }
+
+/*.heroImageDiv{
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  background: url("/assets/logo.png");
+  overflow: hidden;
+}*/
 
 .imageDiv img {
   width: 100%;
@@ -263,14 +291,11 @@ cite, em {
   background: rgb(255, 255, 255);
   border: 1px solid rgb(0, 0, 0);
   width: 100%;
-  /*display: block;*/
   margin: auto;
   height: auto;
   padding: 5px;
   position: relative;
   float: left;
-  /*z-index: 1;*/
-  /*overflow: visible;*/
 }
 
 .imageDivExpanded {
@@ -278,10 +303,41 @@ cite, em {
   margin-right: 5px;
   float: left;
   height: auto;
-  background: yellow;
+  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
 }
 
 .imageDivExpanded img {
   width: 100%;
 }
 /*------------------------*/
+
+/*
+  ========================================
+  footer classes
+  ========================================
+*/
+
+.primary-footer {
+  background: rgb(0,0,0);
+  color: rgb(255,255,255);
+  border-left: 2px solid rgb(0,0,0);
+  border-right: 2px solid rgb(0,0,0);
+  border-bottom: 2px solid rgb(0,0,0);
+  padding: 15px;
+  display: block;
+  font-family: futura;
+  text-align: center;
+}
+
+.primary-footer a{
+  color: rgb(255,255,255);
+}
+
+.primary-footer a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
+}

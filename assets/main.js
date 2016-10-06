@@ -1,24 +1,24 @@
 "use strict"
-  var sourcesArr = [
-    {
-      source: "ESPN",
-      url: "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=909efd3e931c4e16bde5565b8d10f113"
-    },
-    {
-      source: "Fox Sports",
-      url: "https://newsapi.org/v1/articles?source=fox-sports&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
-    },
-    {
-      source: "NFL News",
-      url: "https://newsapi.org/v1/articles?source=nfl-news&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
-    },
-    {
-      source: "SKY Sports News",
-      url: "https://newsapi.org/v1/articles?source=sky-sports-news&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
-    },
-    {
-    source: "BBC Sports",
-    url: "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=909efd3e931c4e16bde5565b8d10f113"
+var sourcesArr = [
+  {
+    source: "ESPN",
+    url: "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=909efd3e931c4e16bde5565b8d10f113"
+  },
+  {
+    source: "Fox Sports",
+    url: "https://newsapi.org/v1/articles?source=fox-sports&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
+  },
+  {
+    source: "NFL News",
+    url: "https://newsapi.org/v1/articles?source=nfl-news&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
+  },
+  {
+    source: "SKY Sports News",
+    url: "https://newsapi.org/v1/articles?source=sky-sports-news&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
+  },
+  {
+  source: "BBC Sports",
+  url: "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=909efd3e931c4e16bde5565b8d10f113"
   },
   {
     source: "FourFourTwo",
@@ -37,11 +37,8 @@
     url: "https://newsapi.org/v1/articles?source=football-italia&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
   }
 ];
-// var randomSportSourcesArr = randomElementsArr(sourcesArr);
-// console.log(randomSportSourcesArr);
 
-
-//Get random elements inside an array;
+//Get random elements inside an array; (creates array elements)
 function randomElementsArr (array) {
   var endArray = [];
   let iterator = array.length;
@@ -55,6 +52,7 @@ function randomElementsArr (array) {
   return endArray;
 }
 
+//shuffle the array
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -63,6 +61,16 @@ function shuffleArray(array) {
         array[j] = temp;
     }
     return array;
+  }
+
+  //Reload the page
+
+function pageReload(time) {
+  setTimeout(reloadFun, time);
+}
+
+function reloadFun() {
+  window.location.reload(true);
 }
 
 window.onload = function() {
@@ -73,6 +81,7 @@ window.onload = function() {
 
   toggleHeroClass();
   toggleArticleClasses();
+  pageReload(600000);
 };//End of onload function
 
 
@@ -132,7 +141,6 @@ function apiData(idxForSourcesArr, url) {
     resultAnchor.setAttribute("target", "_blank");
     resultImage.setAttribute("alt", "Sorry, there is no image provided by the source")
     resultAnchor.innerText = "Source: " + data.source + " via newsapi.org ";
-    console.log(data.articles[0].source);
     resultImage.src = data.articles[0].urlToImage;
     resultArticle.textContent = data.articles[0].description;
 
