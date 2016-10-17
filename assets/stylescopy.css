@@ -1,122 +1,352 @@
 /*
   ========================================
-  Links
+  Custom styles
   ========================================
 */
-.primary-header a,
-.primary-footer a {
-  color: rgba(255, 255, 255, 1);
+body {
+  background: rgb(227, 227, 227);
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.primary-header a:hover,
-.primary-footer a:hover {
-  color: rgba(100, 136, 128, 1);
+section {
+  background: rgb(255, 255, 255);
 }
 
-a:hover {
-  color: rgba(169, 178, 185, 1);
+h1, h2, h3, h4, h5 {
+  color:  rgba(0, 0, 0, 1);
+}
+
+h1 {
+  font-size: 44px;
+  font-family: Futura;
+  color: rgb(255,255,255);
+  border-right: 2px solid rgb(0,0,0);
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 21px;
+  font-family: "Helvetica Neue";
+  padding: 10px 0 10px 0;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: 400;
+}
+
+cite, em {
+  font-style: italic;
 }
 
 a {
-  color: rgba(100, 136, 128, 1);
   text-decoration: none;
 }
 
-p a {
-  border-bottom: 1px solid rgba(223, 226, 229, 1);
+/*
+  ========================================
+  Hero typography
+  ========================================
+*/
+
+.hero {
+  color: rgba(255, 255, 255, 1);
+  padding: 15px;
+  border-right: 2px solid rgb(0,0,0);
+  border-left: 2px solid rgb(0,0,0);
+}
+
+.hero h3 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.hero h4 {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+
+/*
+  ========================================
+  box sizing
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*
   ========================================
-  Buttons
+  Grid
   ========================================
 */
 
-.btn {
-   border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.grid {
+  padding: 0 15px 15px 15px;
+  margin: auto;
+  width: 90%;
+  border-left: 2px solid rgb(0,0,0);
+  border-right: 2px solid rgb(0,0,0);
+  border-bottom: 2px solid rgb(0,0,0);
+}
+
+.transform {
+  -webkit-transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -o-transition: width 1s linear;
+  -ms-transition: width 1s linear;
+  transition: width 1s linear;
+}
+
+/*
+  ========================================
+  header classes
+  ========================================
+*/
+.header {
+  width: 100%;
+  background: rgb(0,0,0);
+  padding: 20px 5px 20px 5px;
+  height: auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.logo{
+  background: rgb(0,0,0);
+  padding-left: 10px;
   display: inline-block;
-  font-weight: 400;
-  letter-spacing: .5px;
-  margin: 0;
-  text-transform: uppercase;
-}
-.btn-alt {
-  border: 1px solid rgba(255, 255, 255, 1);
-  padding: 10px 30px;
 }
 
-.btn-alt:hover {
-  background: rgba(255, 255, 255, 1);
-  color: rgba(100, 136, 128, 1);
-}
-/*
-  ========================================
-  Primary header
-  ========================================
-*/
-
-.logo {
-  border-top: 4px solid #648880;
-  float: left;
-  font-size: 48px;
-  line-height: 44px;
-  padding: 40px 0 22px 0;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: .5px;
+.logo a{
+  color: rgb(255,255,255);
 }
 
-.tagline {
-  margin: 66px 0 22px 0;
-  text-align: right;
+.logo a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
 }
 
 .primary-nav {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: .5px;
-  text-transform: uppercase;
+display: inline-block;
+width: 72%;
+}
+
+.primary-nav a {
+  color: rgb(255,255,255);
+  font-size: 24px;
+}
+
+.primary-nav a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
+}
+
+.group {
+  height: auto;
 }
 
 /*
   ========================================
-  Primary footer
+  hero classes
+  ========================================
+*/
+
+.heroArticleClass {
+  border: 1px solid rgb(242, 242, 242);
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 5px;
+  height: 340px;
+  overflow: hidden;
+}
+
+.heroArticleClass:hover {
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.heroArticleClass h4 a:hover{
+  color: rgba(169, 178, 185, 1);
+}
+
+.heroImageDiv{
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  overflow: hidden;
+  background: url('http://sportytourist.com/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+.heroImageDiv img{
+  width: 100%;
+}
+
+
+/*--------Expansion on click--------------*/
+.heroArticleExpanded {
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
+  padding: 5px;
+}
+
+.heroImageDivExpanded {
+  width: 50%;
+  margin-right: 5px;
+  float: left;
+  height: auto;
+  background: url('http://sportytourist.com/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+.heroImageDivExpanded img {
+  width: 100%;
+}
+/*----------------------------------------*/
+
+/*
+  ========================================
+  articles classes
+  ========================================
+*/
+.sportsArticleClass {
+  border: 1px solid rgb(242, 242, 242);
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  padding: 5px;
+  vertical-align: top;
+  height: 325px;
+  overflow: hidden;
+}
+
+.sportsArticleClass:hover {
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.imageDiv {
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  overflow: hidden;
+  background: url("http://sportytourist.com/assets/images/logo.gif");
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+/*.heroImageDiv{
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  background: url("/assets/logo.png");
+  overflow: hidden;
+}*/
+
+.imageDiv img {
+  width: 100%;
+}
+
+.sportsArticleClass h4 a:hover{
+  color:  rgba(169, 178, 185, 1);
+}
+
+/*--------Expansion on click--------------*/
+.sportsArticleExpanded {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  margin: auto;
+  height: auto;
+  padding: 5px;
+  position: relative;
+  float: left;
+}
+
+.imageDivExpanded {
+  width: 50%;
+  margin-right: 5px;
+  float: left;
+  height: auto;
+  background: url('http://sportytourist.com/assets/images/logo.gif');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%
+}
+
+.imageDivExpanded img {
+  width: 100%;
+}
+/*------------------------*/
+
+/*
+  ========================================
+  footer classes
   ========================================
 */
 
 .primary-footer {
-  color: rgba(100, 136, 128, 1);
-  font-size: 14px;
-  padding-bottom: 44px;
-  padding-top: 44px;
-}
-.primary-footer small {
-  float: left;
-  font-weight: 400;
-}
-
-
-
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
-
-.nav {
-  text-align: right;
+  background: rgb(0,0,0);
+  color: rgb(255,255,255);
+  border-left: 2px solid rgb(0,0,0);
+  border-right: 2px solid rgb(0,0,0);
+  border-bottom: 2px solid rgb(0,0,0);
+  padding: 15px;
+  display: block;
+  font-family: futura;
+  text-align: center;
 }
 
-/*
-  ========================================
-  Rows
-  ========================================
-*/
+.primary-footer a{
+  color: rgb(255,255,255);
+}
 
-.row {
-  background: #fff;
-  min-width: 960px;
-  padding: 66px 0 44px 0;
+.primary-footer a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
 }

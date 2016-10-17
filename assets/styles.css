@@ -31,11 +31,14 @@ h2 {
 h3 {
   font-size: 21px;
   font-family: "Helvetica Neue";
-  padding: 10px 0 10px 0;
+  /*padding: 0 0 5px 0;*/
+  margin: 5px 0 5px 0;
 }
 
 h4 {
   font-size: 18px;
+  /*padding: 5px 0 5px 0;*/
+  margin: 5px 0 5px 0;
 }
 
 h5 {
@@ -78,12 +81,13 @@ a {
 
 .hero h4 {
   font-size: 24px;
-  padding-bottom: 10px;
+  /*padding-bottom: 10px;*/
 }
 
 .hero p {
   font-size: 20px;
   color: rgb(0, 0, 0);
+  /*margin-top: 100px*/
 }
 
 
@@ -121,13 +125,13 @@ a {
   border-bottom: 2px solid rgb(0,0,0);
 }
 
-.transform {
+/*.transform {
   -webkit-transition: width 1s linear;
   -moz-transition: width 1s linear;
   -o-transition: width 1s linear;
   -ms-transition: width 1s linear;
   transition: width 1s linear;
-}
+}*/
 
 /*
   ========================================
@@ -137,7 +141,7 @@ a {
 .header {
   width: 100%;
   background: rgb(0,0,0);
-  padding: 20px 5px 20px 5px;
+  padding: 0 5px 5px 5px;
   height: auto;
   vertical-align: middle;
   text-align: center;
@@ -147,6 +151,15 @@ a {
   background: rgb(0,0,0);
   padding-left: 10px;
   display: inline-block;
+}
+
+.logo a{
+  color: rgb(255,255,255);
+}
+
+.logo a:hover {
+  color: rgb(115,115,115);
+  cursor: pointer;
 }
 
 .primary-nav {
@@ -180,7 +193,7 @@ width: 72%;
   display: block;
   margin: auto;
   padding: 5px;
-  height: 340px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -198,7 +211,7 @@ width: 72%;
   margin: auto;
   height: 250px;
   overflow: hidden;
-  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background: url('http://sportytourist.com/assets/images/logo.gif');
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/
   background-position: center;
@@ -210,7 +223,7 @@ width: 72%;
 }
 
 
-/*--------Expansion on click--------------*/
+/*--------Expansion of hero on click--------------*/
 .heroArticleExpanded {
   border: 1px solid rgb(0, 0, 0);
   width: 100%;
@@ -225,7 +238,7 @@ width: 72%;
   margin-right: 5px;
   float: left;
   height: auto;
-  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background: url('http://sportytourist.com/assets/images/logo.gif');
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/
   background-position: center;
@@ -244,13 +257,17 @@ width: 72%;
 */
 .sportsArticleClass {
   border: 1px solid rgb(242, 242, 242);
-  width: 50%;
+  width: 33.33%; /*was 50%*/
   display: inline-block;
   margin: auto;
   padding: 5px;
   vertical-align: top;
-  height: 325px;
+  height: 265px;
   overflow: hidden;
+}
+
+.sportsArticleClass p {
+   margin-top: 20px;
 }
 
 .sportsArticleClass:hover {
@@ -261,13 +278,13 @@ width: 72%;
 .imageDiv {
   width: 100%;
   margin: auto;
-  height: 250px;
+  height: 180px;
   overflow: hidden;
-  background: url("file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif");
+  background: url("http://sportytourist.com/assets/images/logo.gif");
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/
   background-position: center;
-  background-size: 100%
+  background-size: 100%;
 }
 
 /*.heroImageDiv{
@@ -286,24 +303,24 @@ width: 72%;
   color:  rgba(169, 178, 185, 1);
 }
 
-/*--------Expansion on click--------------*/
+/*--------Expansion of article on click--------------*/
 .sportsArticleExpanded {
   background: rgb(255, 255, 255);
   border: 1px solid rgb(0, 0, 0);
-  width: 100%;
+  /*width: 100%;*/
   margin: auto;
   height: auto;
   padding: 5px;
   position: relative;
-  float: left;
+  /*float: left;*/
 }
 
 .imageDivExpanded {
-  width: 50%;
+  width: 100%;
   margin-right: 5px;
   float: left;
   height: auto;
-  background: url('file:///Users/paraskevasapostolopoulos/workspace/sporty/assets/images/logo.gif');
+  background: url('http://sportytourist.com/assets/images/logo.gif');
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/
   background-position: center;

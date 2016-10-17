@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var sourcesArr = [
   {
     source: "ESPN",
@@ -38,19 +38,19 @@ var sourcesArr = [
   }
 ];
 
-//Get random elements inside an array; (creates array elements)
-function randomElementsArr (array) {
-  var endArray = [];
-  let iterator = array.length;
-  for (let i = 0; i < iterator; ) {
-    let counter = Math.floor(Math.random() * iterator);
-    if (endArray.indexOf(array[counter]) === -1) {
-      endArray.push(array[counter]);
-      iterator --;
-    }
-  }
-  return endArray;
-}
+//Get random elements inside an array; (creates array elements) -- Probably not needed
+// function randomElementsArr (array) {
+//   var endArray = [];
+//   let iterator = array.length;
+//   for (let i = 0; i < iterator; ) {
+//     let counter = Math.floor(Math.random() * iterator);
+//     if (endArray.indexOf(array[counter]) === -1) {
+//       endArray.push(array[counter]);
+//       iterator --;
+//     }
+//   }
+//   return endArray;
+// }
 
 //shuffle the array
 function shuffleArray(array) {
@@ -92,7 +92,7 @@ function heroSectionArticles(arrWithSources) {
   let sourcesUrl = arrWithSources[0].url;
   let heroArticle = document.createElement("article");
   heroArticle.className += "heroArticleClass";
-  heroArticle.className += " transform";
+  // heroArticle.className += " transform"; Not needed because I am not applying special effect
   arrWithSources[0] = heroArticle;
   apiData(0, sourcesUrl);
   heroSection.appendChild(heroArticle);
@@ -107,7 +107,7 @@ function sportsSectionArticles(arrWithSources) {
     let sourcesUrl = arrWithSources[i].url;
     let sportsArticle = document.createElement("article");
     sportsArticle.className += "sportsArticleClass";
-    sportsArticle.className += " transform";
+    // sportsArticle.className += " transform"; //not needed because I am not applying special effect
     arrWithSources[i] = sportsArticle;
     apiData(i, sourcesUrl);
     sportsSection.appendChild(sportsArticle);
@@ -126,29 +126,40 @@ function apiData(idxForSourcesArr, url) {
 
   // Inner function in order to close over idxForSourcesArr
   function sportsNewsResult(data) {
+    //hero
+    let heroResultTitle = document.createElement("h3");
+    let heroResultSource = document.createElement("h4");
+    let heroImageDiv = document.createElement("div");
+    let heroResultImage = document.createElement("img");
+    let heroResultArticle = document.createElement("p");
+    let heroArticleSourceAnchor = document.createElement("a");
+
+    //articles
     let resultTitle = document.createElement("h3");
     let resultSource = document.createElement("h4");
     let imageDiv = document.createElement("div");
     let resultImage = document.createElement("img");
     let resultArticle = document.createElement("p");
-    let resultAnchor = document.createElement("a");
+    let articleSourceAnchor = document.createElement("a");
 
-    imageDiv.className += "heroImageDiv";
-    // imageDiv.className += " transform";
-    // resultImage.className += "transform";
+    let moreButtonDiv = document.createElement("div");
+    let moreButtonAnchor = document.createElement("a");
+
     resultTitle.textContent = data.articles[0].title;
-    resultAnchor.setAttribute("href", data.articles[0].url);
-    resultAnchor.setAttribute("target", "_blank");
-    resultImage.setAttribute("alt", "Sorry, there is no image provided by the source")
-    resultAnchor.innerText = "Source: " + data.source + " via newsapi.org ";
+    imageDiv.className += "imageDiv";
+    articleSourceAnchor.setAttribute("href", data.articles[0].url);
+    articleSourceAnchor.setAttribute("target", "_blank");
+    resultImage.setAttribute("alt", "Sorry, there is no image provided by the source");
+    articleSourceAnchor.innerText = "Source: " + data.source + " via newsapi.org ";
     resultImage.src = data.articles[0].urlToImage;
     resultArticle.textContent = data.articles[0].description;
+    moreButtonDiv.innerText = "More";
 
     //
     imageDiv.appendChild(resultImage);
     sourcesArr[idxForSourcesArr].appendChild(imageDiv);
     sourcesArr[idxForSourcesArr].appendChild(resultTitle);
-    resultSource.appendChild(resultAnchor);
+    resultSource.appendChild(articleSourceAnchor);
     sourcesArr[idxForSourcesArr].appendChild(resultSource);
     sourcesArr[idxForSourcesArr].appendChild(resultArticle);
 
@@ -160,7 +171,7 @@ function apiData(idxForSourcesArr, url) {
 // }
 
 //-------------------TOGGLES------------------------------
-//toggle between classes for expanding the article content
+//toggle between classes for expanding the hero article content
 function toggleHeroClass() {
   $(".heroArticleClass").on("click", function(){
     $(this).toggleClass("heroArticleExpanded");
