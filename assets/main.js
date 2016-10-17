@@ -5,6 +5,10 @@ var sourcesArr = [
     url: "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=909efd3e931c4e16bde5565b8d10f113"
   },
   {
+    source: "ESPN Cric Info",
+    url: "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113",
+  },
+  {
     source: "Fox Sports",
     url: "https://newsapi.org/v1/articles?source=fox-sports&sortBy=latest&apiKey=909efd3e931c4e16bde5565b8d10f113"
   },
@@ -141,6 +145,7 @@ function apiData(idxForSourcesArr, url) {
     resultTitle.textContent = data.articles[0].title;
     imageDiv.className += "imageDiv";
     heroImageDiv.className += "heroImageDiv";/////////////////////////////////
+    moreButtonDiv.className += "moreButtonDiv";
 
     articleSourceAnchor.setAttribute("href", data.articles[0].url);
     articleSourceAnchor.setAttribute("target", "_blank");
@@ -148,15 +153,17 @@ function apiData(idxForSourcesArr, url) {
     articleSourceAnchor.innerText = "Source: " + data.source + " via newsapi.org ";
     resultImage.src = data.articles[0].urlToImage;
     resultArticle.textContent = data.articles[0].description;
-    moreButtonDiv.innerText = "More";
+    moreButtonAnchor.innerText = "More";
 
     //
     imageDiv.appendChild(resultImage);
+    resultSource.appendChild(articleSourceAnchor);
+    moreButtonDiv.appendChild(moreButtonAnchor);
     sourcesArr[idxForSourcesArr].appendChild(imageDiv);
     sourcesArr[idxForSourcesArr].appendChild(resultTitle);
-    resultSource.appendChild(articleSourceAnchor);
     sourcesArr[idxForSourcesArr].appendChild(resultSource);
     sourcesArr[idxForSourcesArr].appendChild(resultArticle);
+    sourcesArr[idxForSourcesArr].appendChild(moreButtonDiv);
 
   }
 } //End of apiData function
@@ -172,6 +179,7 @@ function toggleHeroClass() {
     $(this).toggleClass("heroArticleExpanded");
     $(this).children("div").toggleClass("heroImageDivExpanded");
     $(this).children("div").toggleClass("imageDiv");
+    $(this).children(".moreButtonDiv").removeClass("imageDiv");
 
     $(".sportsArticleExpanded").removeClass("sportsArticleExpanded");
     $(".imageDivExpanded").removeClass("imageDivExpanded");
@@ -182,10 +190,11 @@ function toggleHeroClass() {
 function toggleArticleClasses() {
   $(".sportsArticleClass").on("click", function(){
     $(this).toggleClass("sportsArticleExpanded");
-    $(this).children("div").toggleClass("imageDivExpanded");
+    $(this).children(".imageDiv").toggleClass("imageDivExpanded");
 
     $(this).siblings().removeClass("sportsArticleExpanded");
     $(".heroArticleExpanded").removeClass("heroArticleExpanded");
+    $(".heroImageDivExpanded").addClass("heroImageDiv");
     $(".heroImageDivExpanded").removeClass("heroImageDivExpanded");
     $(this).siblings().children("div").removeClass("imageDivExpanded");
   });

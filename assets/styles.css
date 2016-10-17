@@ -209,7 +209,7 @@ width: 72%;
 .heroImageDiv{
   width: 100%;
   margin: auto;
-  height: 250px;
+  height: 180px;
   overflow: hidden;
   background: url('http://sportytourist.com/assets/images/logo.gif');
   background-repeat: no-repeat;
@@ -322,6 +322,27 @@ width: 72%;
   width: 100%;
 }
 /*------------------------*/
+
+/*
+  ========================================
+  more button
+  ========================================
+*/
+.moreButtonDiv {
+  background: rgb(191, 191, 191);
+  width: 60px;
+  float: right;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border: 2px solid rgb(0, 0, 0);
+  /*border-radius: 10px;*/
+  font: normal normal bold 14px/22px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(255,255,255);
+}
+
+.moreButtonDiv:hover {
+  background: rgb(128, 128, 128);
+}
 
 /*
   ========================================
