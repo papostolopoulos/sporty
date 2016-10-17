@@ -126,18 +126,11 @@ function apiData(idxForSourcesArr, url) {
 
   // Inner function in order to close over idxForSourcesArr
   function sportsNewsResult(data) {
-    //hero
-    let heroResultTitle = document.createElement("h3");
-    let heroResultSource = document.createElement("h4");
-    let heroImageDiv = document.createElement("div");
-    let heroResultImage = document.createElement("img");
-    let heroResultArticle = document.createElement("p");
-    let heroArticleSourceAnchor = document.createElement("a");
-
     //articles
     let resultTitle = document.createElement("h3");
     let resultSource = document.createElement("h4");
     let imageDiv = document.createElement("div");
+    let heroImageDiv = document.createElement("div");//////////////////////////////
     let resultImage = document.createElement("img");
     let resultArticle = document.createElement("p");
     let articleSourceAnchor = document.createElement("a");
@@ -147,6 +140,8 @@ function apiData(idxForSourcesArr, url) {
 
     resultTitle.textContent = data.articles[0].title;
     imageDiv.className += "imageDiv";
+    heroImageDiv.className += "heroImageDiv";/////////////////////////////////
+
     articleSourceAnchor.setAttribute("href", data.articles[0].url);
     articleSourceAnchor.setAttribute("target", "_blank");
     resultImage.setAttribute("alt", "Sorry, there is no image provided by the source");
@@ -176,6 +171,7 @@ function toggleHeroClass() {
   $(".heroArticleClass").on("click", function(){
     $(this).toggleClass("heroArticleExpanded");
     $(this).children("div").toggleClass("heroImageDivExpanded");
+    $(this).children("div").toggleClass("imageDiv");
 
     $(".sportsArticleExpanded").removeClass("sportsArticleExpanded");
     $(".imageDivExpanded").removeClass("imageDivExpanded");

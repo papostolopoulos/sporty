@@ -222,7 +222,6 @@ width: 72%;
   width: 100%;
 }
 
-
 /*--------Expansion of hero on click--------------*/
 .heroArticleExpanded {
   border: 1px solid rgb(0, 0, 0);
@@ -286,14 +285,6 @@ width: 72%;
   background-position: center;
   background-size: 100%;
 }
-
-/*.heroImageDiv{
-  width: 100%;
-  margin: auto;
-  height: 250px;
-  background: url("/assets/logo.png");
-  overflow: hidden;
-}*/
 
 .imageDiv img {
   width: 100%;
