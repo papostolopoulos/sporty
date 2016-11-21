@@ -1,0 +1,34 @@
+{
+  "name": "sportytourist",
+  "version": "1.0.0",
+  "description": "sportyTourist online app / website by Paraskevas Apostolopoulos. All rights reserved",
+  "main": "main.js",
+  "dependencies": {
+    "browser-build": "^0.5.5",
+    "browserify": "^13.1.0",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papostolopoulos/sporty.git"
+  },
+  "keywords": [
+    "sportsTourism",
+    "sports",
+    "online",
+    "reservations",
+    "sportsnews",
+    "news",
+    "onlineTicketReservations"
+  ],
+  "author": "Paraskevas Apostolopoulos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papostolopoulos/sporty/issues"
+  },
+  "homepage": "https://github.com/papostolopoulos/sporty#readme"
+}
